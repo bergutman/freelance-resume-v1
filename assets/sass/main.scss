@@ -1,0 +1,59 @@
+@import '_type.scss';
+
+.row {
+  margin-top: 50px;
+  .col-xs-2 {
+    h1 {
+      position: fixed;
+      left: 6%;
+      color: #ffffff;
+      background-color: #3f7dd0;
+      padding: 2%;
+    }
+    i {
+      position: fixed;
+    }
+  }
+}
+.contact {
+  i {
+    margin-left: 2%;
+    &:nth-of-type(1) {
+      margin-left: 0;
+    }
+  }
+}
+.position {
+  margin-top: 45px;
+}
+.skills {
+  display: inline-block;
+  span {
+    float: left;
+    background-color: #f1f5f7;
+    padding: 5px;
+    margin: 5px;
+  }
+}
+ul {
+  @media(max-width: 768px) {
+    padding-left: 0;
+  }
+}
+a {
+  cursor: pointer;
+}
+
+h2 {
+  margin-top: 60px;
+}
+
+h4 {
+  margin-top: 45px;
+  margin-bottom: 25px;
+  padding: 5px;
+  background-color: #3f7dd0;
+}
+.after-float {
+  clear: both;
+}
