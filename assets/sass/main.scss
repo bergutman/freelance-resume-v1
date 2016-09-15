@@ -13,6 +13,23 @@
     i {
       position: fixed;
     }
+    a {
+      position: fixed;
+      top: 200px;
+      left: 11%;
+      @media(max-width: 768px) {
+        top: 135px !important;
+      }
+      h1 {
+        top: 175px !important;
+        padding: 1% !important;
+        background-color: transparent !important;
+        @media(max-width: 768px) {
+          font-size: 0.75em;
+          top: 125px !important;
+        }
+      }
+    }
   }
 }
 .contact {
