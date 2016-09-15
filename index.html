@@ -16,7 +16,7 @@
 </head>
 
 <body>
-  <div class="container-fluid">
+  <div class="container-fluid" id="resume">
     <div class="row">
       <div class="col-xs-2">
         <h1 class="text-xs-center">C<br>G</h1>
@@ -35,14 +35,15 @@
         <p class="work-place-bio">Work with a wide range of clients on projects to meet their business needs. Specialize in full-stack web development with an emphasis on responsive design, CMS integration, code efficiency, and reliable hosting through a range of Linux based stacks.
           Recent client work includes:</p>
         <ul class="work-place-points">
-          <li><strong>Love &amp; War (New York, NY)</strong>: provide front-end and back-end Wordpress development and design for this well-known design firm on numerous projects including Westlight NYC, a New York Times featured restaurant and bar. Additionally, provide
-            development and support for client websites including the William Vale Hotel, Springhouse Partners, and Mr. Dips bistro.</li>
-          <li><strong>FloatBit (New York, NY)</strong>: provide development, design, and advising for several large projects such as University of Texas Austin's McCombs School of Business website redesign. Additional projects include development of The Bungalow Santa Monica
-            / Huntington Beach website, back-end Wordpress development for Abigail Kirsch catering and event management, and collaborative work on several other projects with multiple developers.</li>
-          <li><strong>Value IT (Paris, France)</strong>: provide front-end design and development, back-end Wordpress development, and server setup / maintenance for projects such as value-info.fr and several internal sites. Provide periodic server maintenance and content
-            management.
+          <li><strong>Love &amp; War (New York, NY)</strong>: provide front-end and back-end Wordpress development and design for this well-known design firm on numerous projects including Westlight NYC, a New York Times featured restaurant and bar. Additionally,
+            provide development and support for client websites including the William Vale Hotel, Springhouse Partners, and Mr. Dips bistro.</li>
+          <li><strong>FloatBit (New York, NY)</strong>: provide development, design, and advising for several large projects such as University of Texas Austin's McCombs School of Business website redesign. Additional projects include development of The Bungalow
+            Santa Monica / Huntington Beach website, back-end Wordpress development for Abigail Kirsch catering and event management, and collaborative work on several other projects with multiple developers.</li>
+          <li><strong>Value IT (Paris, France)</strong>: provide front-end design and development, back-end Wordpress development, and server setup / maintenance for projects such as value-info.fr and several internal sites. Provide periodic server maintenance
+            and content management.
           </li>
-          <li><strong>Droid Industries (San Francisco, CA)</strong>: provide front-end and back-end development and design for Droid Industries landing page, email templates, and email / chat support ticketing system. Additionally, provide content managment and server administration.</li>
+          <li><strong>Droid Industries (San Francisco, CA)</strong>: provide front-end and back-end development and design for Droid Industries landing page, email templates, and email / chat support ticketing system. Additionally, provide content managment
+            and server administration.</li>
         </ul>
         <a href="http://www.eatsmpl.com" target="_blank"><h2 class="work-place">EAT SMPL L.L.C. <i class="material-icons">public</i></h2></a>
         <h3 class="work-place-position">President | Jun, 2014 – Current</h3>
@@ -79,6 +80,24 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
+  <script src="js/jspdf.js"></script>
+  <script>
+    var doc = new jsPDF();
+
+    // We'll make our own renderer to skip this editor
+    var specialElementHandlers = {
+      '#editor': function(element, renderer) {
+        return true;
+      }
+    };
+
+    // All units are in the set measurement for the document
+    // This can be changed to "pt" (points), "mm" (Default), "cm", "in"
+    doc.fromHTML($('#resume').get(0), 15, 15, {
+      'width': 170,
+      'elementHandlers': specialElementHandlers
+    });
+  </script>
 </body>
 
 </html>
