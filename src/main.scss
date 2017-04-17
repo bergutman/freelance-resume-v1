@@ -1,0 +1,149 @@
+$hlt: #FFDD00;
+$hover: #FF6C62;
+$bright: #3f7dd0; //#e84d5b
+$faded: #4a4a4a;
+body {
+  background-color: #eee;
+  font-family: 'Open Sans';
+}
+h1 {
+  font-family: 'Open Sans';
+  font-weight: 700;
+  font-style: italic;
+  margin: 0;
+  font-size: 2em;
+  .large {
+    font-weight: 800;
+    text-transform: uppercase;
+    font-style: normal;
+    font-size: 1.2em;
+  }
+}
+h5 {
+  color: $faded;
+}
+a {
+  color: #000;
+  text-decoration: none;
+  //background-color: $hlt;
+  i {
+    vertical-align: middle;
+  }
+}
+p {
+  line-height: 1.8em;
+  font-family: 'Lora';
+}
+.grid {
+  background-color: #eee;
+  padding: 2%;
+}
+.strong {
+  font-weight: 600;
+}
+.t-il {
+  display: inline;
+}
+.t-il-l {
+  float: left;
+  margin: 0;
+}
+.t-il-r {
+  float: right;
+  margin: 0;
+}
+.t-l {
+  text-align: left;
+}
+.t-c {
+  text-align: center;
+}
+.t-r {
+  text-align: right;
+}
+.t-j {
+  text-align: justify;
+}
+.t-up {
+  text-transform: uppercase;
+}
+.t-dec {
+  text-decoration: underline;
+}
+.job, .project {
+  margin-bottom: 5px;
+}
+.job-desc, .project-desc {
+  margin: 0;
+}
+.pinline {
+  display: block;
+  overflow: hidden;
+  font-size: 1em;
+  font-weight: 100;
+  margin: 20px 0;
+  font-family: 'Open Sans';
+  font-weight: 700;
+  text-transform: uppercase;
+  span {
+    position: relative;
+    display: inline-block;
+    line-height: 1;
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      height: 2px;
+      background: $bright;
+      width: 99999px;
+    }
+    &:before {
+      left: 100%;
+      margin-left: 20px;
+    }
+    &:after {
+      right: 100%;
+      margin-right: 20px;
+    }
+  }
+}
+.CG {
+  width: 50%;
+  background-color: $bright;
+  color: #fff;
+  @media(max-width: 840px) {
+    width: 100%;
+  }
+}
+.contact {
+  background-color: $bright;
+  padding: 1vh;
+  a {
+    margin: 2vh;
+    color: #fff;
+    &:hover {
+      color: #000;
+    }
+  }
+  @media(max-width: 840px) {
+    a {
+      display: flex;
+      width: 100%;
+      font-size: 0.75em;
+    }
+  }
+}
+.skills {
+  span {
+    font-family: 'Open Sans';
+    background-color: $bright;
+    color: #fff;
+    font-weight: 600;
+    padding: 5px;
+    line-height: 7vh;
+    &:hover {
+      background-color: #000;
+    }
+  }
+}
